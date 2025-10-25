@@ -1,20 +1,33 @@
-// App.jsx
 import React from "react";
+import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
+import Collection from "./pages/Collection";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Product from "./pages/Product";
+import Cart from "./pages/Cart";
+import Login from "./pages/Login";
+import PlaceOrder from "./pages/PlaceOrder";
+import Orders from "./pages/Orders";
+import Navbar from "./components/Navbar";
 
-function App() {
+const App = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600 mb-4">
-        Tailwind CSS is Working!
-      </h1>
-      <button className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">
-        Click Me
-      </button>
-      <p className="mt-4 text-gray-700">
-        If you see styled heading, button, and background, Tailwind is working.
-      </p>
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/product/:productId" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/place-order" element={<PlaceOrder />} />
+        <Route path="/orders" element={<Orders />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
