@@ -1,14 +1,17 @@
 import React from "react";
 import Hero from "../components/Hero";
 import LatestCollection from "../components/LatestCollection";
-import { products } from "../assets/assets";
+import BestSeller from "../components/BestSeller";
+import Ourpolicy from "../components/Ourpolicy";
 
 const Home = () => {
   return (
     // <div className='text-red-500 text-5xl text-' >Welcome Home</div>
     <>
       <Hero />
-      <LatestCollection/>
+      <LatestCollection />
+      <BestSeller />
+      <Ourpolicy />
     </>
   );
 };
